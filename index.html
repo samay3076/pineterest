@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fab fa-pinterest"></i>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-buttons">
+                <button class="home active">Home</button>
+                <button class="create" id="createBtn">Create</button>
+            </div>
+            <div class="profile">
+                <img src="https://api.dicebear.com/6.x/avataaars/svg?seed=Felix" alt="profile">
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="modal" id="createModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Pin</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag and drop or click to upload</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <div class="pin-details">
+                    <input type="text" placeholder="Add your title" class="pin-title">
+                    <textarea placeholder="Tell everyone what your Pin is about" class="pin-description"></textarea>
+                    <input type="text" placeholder="Add a destination link" class="pin-link">
+                </div>
+                <button class="publish-btn">Publish</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="pin-container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
