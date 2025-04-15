@@ -60,12 +60,8 @@ function createPin(image) {
     
     return pin;
 }
-
-// Function to load pins
 function loadPins() {
     const container = document.querySelector('.pin-container');
-    
-    // Create multiple sets of images for infinite scroll effect
     for (let i = 0; i < 4; i++) {
         images.forEach(image => {
             const pin = createPin(image);
@@ -169,7 +165,6 @@ searchInput.addEventListener('input', (e) => {
     });
 });
 
-// Save button functionality
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('save-btn')) {
         e.target.textContent = 'Saved';
